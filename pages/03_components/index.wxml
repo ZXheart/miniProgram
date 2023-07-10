@@ -1,0 +1,39 @@
+<!--pages/03_components/index.wxml-->
+<view class="container">
+  <view>{{'<'}}-------------1. text-------------{{'>'}}</view>
+  <text decode> &lt;text&gt;: text component</text>
+
+  <view>{{'<'}}------------2. button: getUserInfo----------{{'>'}}</view>
+  <button type="primary" bindtap="getUserInfo">button</button>
+
+  <view>{{'<'}}-------------3. view-------------{{'>'}}</view>
+  <view hover-class="hover-active">i'm view component</view>
+
+  <view>{{'<'}}-------------4. image-------------{{'>'}}</view>
+  <image src="/img/dong.jpg" mode="heightFix" />
+
+  <view>{{'<'}}-------------5. get local image-------------{{'>'}}</view>
+  <button type="primary" bindtap="chooseImg">choose img</button>
+  <image src="{{profile}}" mode="widthFix" />
+
+  <view>{{'<'}}-------------6. scroll-view y-------------{{'>'}}</view>
+  <scroll-view class="scroll-y" scroll-y>
+    <block wx:for="{{scrollColors}}" wx:key="*this">
+      <view class="item" style="background-color: {{item}};">
+        {{index+1}} - {{item}}
+      </view>
+    </block>
+  </scroll-view>
+
+  <view>{{'<'}}-------------7. scroll-view x-------------{{'>'}}</view>
+  <scroll-view class="scroll-x" enable-flex scroll-x>
+    <block wx:for="{{scrollColors}}" wx:key="*this">
+      <view class="item" style="background-color: {{item}};">
+        {{index+1}} - {{item}}
+      </view>
+    </block>
+  </scroll-view>
+
+  <view>{{'<'}}-------------8. -------------{{'>'}}</view>
+
+</view>

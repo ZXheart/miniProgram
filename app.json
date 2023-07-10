@@ -2,14 +2,16 @@
   "pages": [
     "pages/index/index",
     "pages/me/me",
-    "pages/reachBottom/demo",
-    "pages/counter/test"
+    "pages/01_reachBottom/demo",
+    "pages/02_counter/test",
+    "pages/03_components/index",
+    "pages/04_wxs/index"
   ],
   "window": {
     "backgroundTextStyle": "dark",
-    "navigationBarBackgroundColor": "#fff",
+    "navigationBarBackgroundColor": "#07c160",
     "navigationBarTitleText": "MiniProgram",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "white"
   },
   "tabBar": {
     "list": [

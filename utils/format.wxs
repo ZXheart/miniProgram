@@ -1,0 +1,38 @@
+var formatNumber = function (num) {
+  var numLength = ('' + num).length
+  if (numLength <= 5) {
+    return num
+  } else if (numLength >= 9) {
+    return (num / 100000000).toFixed(1) + '亿'
+  } else {
+    return (num / 10000).toFixed(1) + '万'
+  }
+}
+var formatTime = function (num) {
+  if (num <= 60) {
+    return '00:' + num
+  } else {
+    var second = num % 60
+    var minute = (num - second) / 60
+    var hour = 0
+    if (second < 10) second = '0' + second
+    if (minute < 10) minute = '0' + minute
+    if (minute > 60) {
+      var empty = minute % 60
+      hour = (minute - empty) / 60
+      minute = empty
+      if (minute < 10) minute = '0' + minute
+    }
+    if (hour) {
+      if (hour < 10) return '0' + hour + ':' + minute + ':' + second
+      else {
+        return hour + ':' + minute + ':' + second
+      }
+    }
+    return minute + ':' + second
+  }
+}
+module.exports = {
+  formatNumber: formatNumber,
+  formatTime: formatTime
+}

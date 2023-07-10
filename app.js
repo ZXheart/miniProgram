@@ -1,5 +1,10 @@
 // app.js
 App({
+  globalData: {
+    userInfo: null,
+    tools: ['rake', 'spade', 'hoe'],
+    logs: []
+  },
   onLaunch() {
     // 展示本地存储能力
     const logs = wx.getStorageSync('logs') || []
@@ -12,10 +17,5 @@ App({
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
       }
     })
-  },
-  globalData: {
-    userInfo: null,
-    tools: ['rake', 'spade', 'hoe'],
-    logs: []
   }
 })

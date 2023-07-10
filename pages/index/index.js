@@ -7,11 +7,19 @@ Page({
     pages: [
       {
         name: '01_ReachBotton',
-        url: '/pages/reachBottom/demo'
+        url: '/pages/01_reachBottom/demo'
       },
       {
         name: '02_counter',
-        url: '/pages/counter/test'
+        url: '/pages/02_counter/test'
+      },
+      {
+        name: '03_components',
+        url: '/pages/03_components/index'
+      },
+      {
+        name: '04_wxs',
+        url: '/pages/04_wxs/index'
       }
     ],
     tools: []
@@ -25,6 +33,10 @@ Page({
   onLoad() {
     this.setData({
       tools: app.globalData.tools
+    })
+    wx.request({
+      url: 'http://123.207.32.32:1888/api/detail/infos?houseId=44173741'
+      // success: res => console.log('index > indexport.js: ', res)
     })
   }
 })

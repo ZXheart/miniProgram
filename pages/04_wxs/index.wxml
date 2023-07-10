@@ -1,0 +1,27 @@
+<!--pages/04_wxs/index.wxml-->
+<wxs src="/utils/total.wxs" module="total" />
+<wxs src="/utils/format.wxs" module="format" />
+<wxs module="formatPrice">
+  var formatPrice = function (price) {
+    return '$' + price
+  }
+  module.exports = {
+    formatPrice: formatPrice
+  }
+</wxs>
+<view>
+  <block>
+
+  </block>
+</view>
+<view>
+  <block wx:for="{{books}}" wx:key="id">
+    <view>
+      product name: {{item.name}} -
+      product price: {{formatPrice.formatPrice(item.price)}}
+    </view>
+  </block>
+</view>
+<view>totalPrice: {{total.totalPrice(books)}}</view>
+<view>testNumber: {{format.formatNumber(3645655)}}</view>
+<view>testTime: {{format.formatTime(125)}}</view>

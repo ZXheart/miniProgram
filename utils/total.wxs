@@ -1,0 +1,11 @@
+var totalCount = function (books) {
+  return (
+    '$' +
+    books.reduce(function (previousValue, item) {
+      return previousValue + item.price
+    }, 0)
+  )
+}
+module.exports = {
+  totalPrice: totalCount
+}

@@ -1,4 +1,0 @@
-<!--pages/demo/demo.wxml-->
-<block wx:for="{{count}}" wx:key="item">
-  <view>current counter -- {{item}}</view>
-</block>

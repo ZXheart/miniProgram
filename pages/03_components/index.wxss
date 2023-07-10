@@ -1,0 +1,23 @@
+/* pages/03_components/index.wxss */
+.hover-active {
+  background-color: rgb(7, 193, 96);
+}
+
+.scroll-y,
+.scroll-x {
+  height: 200rpx;
+  background-color: rgb(7, 193, 96);
+  text-align: center;
+}
+.scroll-x {
+  display: flex;
+}
+.scroll-y .item,
+.scroll-x .item {
+  width: 300rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+.scroll-x .item {
+  flex-shrink: 0;
+}

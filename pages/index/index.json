@@ -1,3 +1,5 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "learn-API": "/components/learn-API/learn-API"
+  }
 }

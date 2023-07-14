@@ -1,0 +1,12 @@
+/* pages/07_API/index.wxss */
+
+.city-group,
+.house-list {
+  text-align: center;
+  background-color: #e81010;
+  color: #fff;
+}
+
+.house-list {
+  background-color: #eb9e17;
+}

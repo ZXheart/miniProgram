@@ -4,8 +4,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    books: [
-      {
+    books: [{
         id: 555,
         name: 'emerald',
         price: 99
@@ -20,9 +19,18 @@ Page({
         name: 'ruby',
         price: 89
       }
-    ]
+    ],
+    currentItme: 0
   },
-
+  onItemTap(event) {
+    var currentIndex = event.currentTarget.dataset.index
+    this.setData({
+      currentItme: currentIndex
+    })
+  },
+  onMarkTap(event) {
+    console.log(event.target.dataset.name, event.mark.name);
+  },
   /**
    * 生命周期函数--监听页面加载
    */

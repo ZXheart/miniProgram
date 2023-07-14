@@ -1,5 +1,10 @@
 /**index.wxss**/
 
 .button-item {
-  margin-top: 5px;
+  margin-top: 10rpx;
+  width: 100%;
+}
+
+.button-item .btn {
+  width: 600rpx;
 }

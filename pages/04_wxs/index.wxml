@@ -9,11 +9,7 @@
     formatPrice: formatPrice
   }
 </wxs>
-<view>
-  <block>
 
-  </block>
-</view>
 <view>
   <block wx:for="{{books}}" wx:key="id">
     <view>
@@ -24,4 +20,18 @@
 </view>
 <view>totalPrice: {{total.totalPrice(books)}}</view>
 <view>testNumber: {{format.formatNumber(3645655)}}</view>
-<view>testTime: {{format.formatTime(125)}}</view>
+<view>testTime: {{format.formatTime(22222)}}</view>
+<view>testTime: {{format.formatTime1(22222)}}</view>
+
+<!-- split line -->
+<view class="tab">
+  <block wx:for="{{books}}" wx:key="id">
+    <view bindtap="onItemTap" data-index="{{index}}" class="item {{currentItme===index ? 'active' : ''}}">
+      <text class="text">{{item.name}}</text>
+    </view>
+  </block>
+</view>
+<!-- split line -->
+<view class="mark" data-name="julien" mark:name="godfrey" bindtap="onMarkTap">
+  mark
+</view>

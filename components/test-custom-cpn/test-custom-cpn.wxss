@@ -1,0 +1,18 @@
+/* components/test-custom-cpn/test-custom-cpn.wxss */
+.common-custom-cpn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px 0;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 28rpx;
+  background-color: #f1f3f5;
+}
+
+.common-custom-cpn .item {
+  padding: 0 4rpx;
+  border-radius: 10rpx;
+  background-color: skyblue;
+  color: #f1f3f5;
+}

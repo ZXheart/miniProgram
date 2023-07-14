@@ -2,7 +2,7 @@
 <view class="container">
   <block wx:for="{{pages}}" wx:key="name">
     <view class="button-item">
-      <button type="primary" bindtap="btnOnClick" data-current="{{item}}"> {{item.name}}</button>
+      <button class="btn" type="primary" bindtap="btnOnClick" data-current="{{item}}"> {{item.name}}</button>
     </view>
   </block>
   <block wx:for="{{tools}}" wx:key="*this">

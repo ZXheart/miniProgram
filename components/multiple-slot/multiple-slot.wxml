@@ -1,0 +1,12 @@
+<!--components/multiple-slot/multiple-slot.wxml-->
+<view class="multiple-slot">
+  <view class="header">
+    <slot name="top"></slot>
+  </view>
+  <view class="content">
+    <slot name="middle"></slot>
+  </view>
+  <view class="footer">
+    <slot name="bottom"></slot>
+  </view>
+</view>

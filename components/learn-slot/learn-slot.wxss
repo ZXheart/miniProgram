@@ -1,0 +1,14 @@
+/* components/learn-slot/learn-slot.wxss */
+.learn-slot {
+  margin-bottom: 5px;
+  background-color: plum;
+  color: #fff;
+}
+
+.default {
+  display: none;
+}
+
+.content:empty+.default {
+  display: block;
+}

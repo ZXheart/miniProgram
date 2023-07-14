@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "learn-slot": "/components/learn-slot/learn-slot",
+    "multiple-slot": "/components/multiple-slot/multiple-slot"
+  }
+}

@@ -1,0 +1,8 @@
+var padStart = function (str, type) {
+  var str = '' + str
+  var newStr = '00' + str
+  return newStr.slice(str.length)
+}
+module.exports = {
+  padStart: padStart
+}

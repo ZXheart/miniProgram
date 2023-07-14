@@ -1,0 +1,5 @@
+/* components/multiple-slot/multiple-slot.wxss */
+.multiple-slot {
+  background-color: #1683f7;
+  color: #fff;
+}

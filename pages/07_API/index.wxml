@@ -1,0 +1,12 @@
+<!--pages/07_API/index.wxml-->
+<view class="API">
+  <view class="city-group">
+    {{cityGroup}}
+  </view>
+  <view class="house-list">
+    <block wx:for="{{houseList}}" wx:key="houseId">
+      <view class="title">{{item.houseName}}</view>
+      <image src="{{item.image.url}}" mode="" />
+    </block>
+  </view>
+</view>

@@ -1,0 +1,18 @@
+<!--pages/06_slot/index.wxml-->
+<view>get started with slot!</view>
+<learn-slot>
+  <image src="/img/dk.jpg" mode="aspectFit" />
+</learn-slot>
+<learn-slot />
+<view>Using multiple slot!</view>
+<multiple-slot>
+  <view slot="top">
+    Here's header!
+  </view>
+  <view slot="middle">
+    Here's content!
+  </view>
+  <view slot="bottom">
+    Here's footer!
+  </view>
+</multiple-slot>

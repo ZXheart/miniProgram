@@ -1,0 +1,11 @@
+<!--components/learn-slot/learn-slot.wxml-->
+<view class="learn-slot">
+  <view class="header">header</view>
+  <view class="content">
+    <slot></slot>
+  </view>
+  <view class="default">
+    I'm default content!
+  </view>
+  <view class="footer">footer</view>
+</view>

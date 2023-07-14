@@ -1,0 +1,9 @@
+<!--pages/05_custom_components/index.wxml-->
+
+<!-- A. test custom component -->
+<test-custom-cop header='Dark Soul 3' content='My favorite game' footer='love it so much!' bindCpnsOntap='headerTaped' />
+<test-custom-cop header='Elden Ring' content='best game of 2022' footer='waiting for DLC' bindCpnsOntap='headerTaped' />
+
+<!-- B. tab control component -->
+<tab-control books="{{books}}" bindOnItemTap="tabItemTap" />
+<tab-control books="{{animals}}" bindOnItemTap="tabItemTap" />

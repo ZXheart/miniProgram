@@ -1,3 +1,4 @@
+var pad = require('./padStart.wxs')
 var formatNumber = function (num) {
   var numLength = ('' + num).length
   if (numLength <= 5) {
@@ -8,31 +9,48 @@ var formatNumber = function (num) {
     return (num / 10000).toFixed(1) + '万'
   }
 }
+// formatTime : version A
 var formatTime = function (num) {
   if (num <= 60) {
-    return '00:' + num
+    return '00 : ' + num
   } else {
-    var second = num % 60
-    var minute = (num - second) / 60
-    var hour = 0
-    if (second < 10) second = '0' + second
-    if (minute < 10) minute = '0' + minute
-    if (minute > 60) {
-      var empty = minute % 60
-      hour = (minute - empty) / 60
-      minute = empty
-      if (minute < 10) minute = '0' + minute
+    var S = num % 60
+    var M = (num - S) / 60
+    var H = 0
+    if (S < 10) S = '0' + S
+    if (M < 10) M = '0' + M
+    if (M > 60) {
+      var empty = M % 60
+      H = (M - empty) / 60
+      M = empty
+      if (M < 10) M = '0' + M
     }
-    if (hour) {
-      if (hour < 10) return '0' + hour + ':' + minute + ':' + second
+    if (H) {
+      if (H < 10) return '0' + H + ' : ' + M + ' : ' + S
       else {
-        return hour + ':' + minute + ':' + second
+        return H + ' : ' + M + ' : ' + S
       }
     }
-    return minute + ':' + second
+    return M + ' : ' + S
+  }
+}
+// simplify formatTime : version B
+var formatTime1 = function (num) {
+  var num = parseInt(num)
+  if (num < 61) return '00' + ' : ' + padStart.padStart(num)
+  var S = num % 60
+  var M = (num - S) / 60
+  var H = 0
+  if (M < 61) return pad.padStart(M) + ' : ' + pad.padStart(S)
+  else {
+    var exchangeMin = M % 60
+    H = (M - exchangeMin) / 60
+    M = exchangeMin
+    return pad.padStart(H) + ' : ' + pad.padStart(M) + ' : ' + pad.padStart(S)
   }
 }
 module.exports = {
   formatNumber: formatNumber,
-  formatTime: formatTime
+  formatTime: formatTime,
+  formatTime1: formatTime1
 }

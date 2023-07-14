@@ -1,0 +1,6 @@
+<!--components/test-custom-cpn/test-custom-cpn.wxml-->
+<view class="common-custom-cpn">
+  <view class="item header" bind:tap="onHeaderTap">{{header}}</view>
+  <view class="item content">{{content}}</view>
+  <view class="item footer">{{footer}}</view>
+</view>

@@ -1,0 +1,13 @@
+/* pages/08_API_others/index.wxss */
+.popup {
+  background-color: pink;
+}
+
+.info {
+  margin: 10rpx 0;
+  background-color: plum;
+}
+
+.storage {
+  background-color: purple;
+}

@@ -1,4 +1,4 @@
-import myRequest from '../request/index'
+import { myRequest } from '../request/index'
 export async function fetchHouseList(currentPage) {
   const res = await myRequest({
     url: 'http://123.207.32.32:1888/api/home/houselist',

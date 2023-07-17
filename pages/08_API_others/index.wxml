@@ -1,0 +1,22 @@
+<!--pages/08_API_others/index.wxml-->
+<!-- popup -->
+<view class="popup">
+  <button type="primary" bind:tap="onShowToast">showToast</button>
+  <button type="primary" bind:tap="onShowModal">showModal</button>
+  <button type="primary" bind:tap="onShowLoading">showLoading</button>
+  <button type="primary" bind:tap="onShowActionSheet">showActionSheet</button>
+</view>
+
+<!-- Info -->
+<view class="info">
+  <button type="primary" bind:tap="onGetSystemInfo">Device Info</button>
+</view>
+
+<!-- Storage -->
+<view class="storage">
+  <button type="primary" bind:tap="setStorageSync">setSync</button>
+  <button type="primary" bind:tap="getStorageSync">getSync</button>
+
+  <button type="primary" bind:tap="setStorageAsync">setAsync</button>
+  <button type="primary" bind:tap="getStorageAsync">getAsync</button>
+</view>

@@ -1,0 +1,4 @@
+<!--nav/01_navTo/index.wxml-->
+<view>firstName: {{firstName}} - lastName: {{lastName}}</view>
+<button type="primary" bind:tap="backTo">navBack</button>
+<navigator type="primary" open-type="navigateBack" class="navigator-component">navigatorBack</navigator>

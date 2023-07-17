@@ -1,0 +1,19 @@
+.navigate {
+  text-align: center;
+}
+
+.name {
+  padding: 10rpx 0;
+  background-color: #0b84d6;
+  color: #fff;
+}
+
+.navigator-component {
+  margin: 10rpx auto;
+  width: 50%;
+  height: 80rpx;
+  line-height: 80rpx;
+  background-color: #716bd3;
+  color: #fff;
+  border-radius: 10rpx;
+}

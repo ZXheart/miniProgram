@@ -1,0 +1,11 @@
+/* nav/01_navTo/index.wxss */
+.navigator-component {
+  margin: 10rpx auto;
+  width: 50%;
+  height: 80rpx;
+  line-height: 80rpx;
+  background-color: #716bd3;
+  color: #fff;
+  border-radius: 10rpx;
+  text-align: center;
+}

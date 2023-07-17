@@ -1,0 +1,4 @@
+/* pages/10_API_login/index.wxss */
+.token {
+  word-break: break-word;
+}

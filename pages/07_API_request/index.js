@@ -1,11 +1,13 @@
 // pages/07_API/index.js
-import myRequest from "../../servers/request/index"
+import { myRequest } from "../../servers/request/index"
+import { zxRequestInstnace } from "../../servers/request/index"
 import { fetchCityGroup, fetchHouseList } from "../../servers/index"
 Page({
   data: {
-    cityGroup: {},
+    cityGroup: '',
     houseList: [],
-    currentPage: 1
+    currentPage: 1,
+    instanceTitle: ''
   },
 
   getCityGroup() {
@@ -33,7 +35,7 @@ Page({
     //     fail: err => console.log(err),
     //   }),
 
-    // B. fetchCityGroup 使用封装函数
+    // B. fetchCityGroup 封装函数
     // myRequest({
     //   url: 'http://123.207.32.32:1888/api/city/all',
     // }).then(res => {
@@ -46,6 +48,12 @@ Page({
     // C. fetchCityGroup 再封装
     this.getCityGroup()
 
+    // D. fetchCityGroup using Class
+    zxRequestInstnace.get({
+      url: '/city/all'
+    }).then(res => {
+      this.setData({ instanceTitle: res.data.data.cityGroup.title })
+    })
 
     // A. fetchHouseList 基本使用
     // wx.request({

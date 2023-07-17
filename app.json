@@ -8,8 +8,17 @@
     "pages/04_wxs/index",
     "pages/05_custom_components/index",
     "pages/06_slot/index",
-    "pages/07_API/index"
+    "pages/07_API_request/index",
+    "pages/08_API_others/index",
+    "pages/09_API_navigate/index",
+    "pages/10_API_login/index",
+    "nav/01_navTo/index"
   ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "I juset wanna!"
+    }
+  },
   "window": {
     "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#07c160",

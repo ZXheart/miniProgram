@@ -1,0 +1,9 @@
+<!--pages/09_API_navigate/index.wxml-->
+<view class="navigate">
+  <view class="name">{{firstName}} {{lastName}}</view>
+  <button bind:tap="navTo" type="primary">navTo</button>
+
+  <navigator class="navigator-component" url="/nav/01_navTo/index">
+    navigatorTo
+  </navigator>
+</view>

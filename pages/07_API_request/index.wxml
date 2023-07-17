@@ -1,7 +1,7 @@
 <!--pages/07_API/index.wxml-->
 <view class="API">
   <view class="city-group">
-    {{cityGroup}}
+    function: {{cityGroup}} class: {{instanceTitle}}
   </view>
   <view class="house-list">
     <block wx:for="{{houseList}}" wx:key="houseId">

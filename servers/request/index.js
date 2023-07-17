@@ -1,5 +1,6 @@
-// A. post-packaging with Function
-function myRequest(options) {
+import { BASE_URL } from './config'
+// A. repackaging into Function
+export function myRequest(options) {
   return new Promise((resolve, reject) => {
     wx.request({
       ...options,
@@ -8,9 +9,36 @@ function myRequest(options) {
     })
   })
 }
-// B. post-packaging with Class
+// B. repackaging into Class
+class zxRequest {
+  constructor(baseUrl) {
+    this.baseUrl = baseUrl
+  }
+  request(options) {
+    const { url } = options
+    return new Promise((resolve, reject) => {
+      wx.request({
+        ...options,
+        url: this.url ? this.baseUrl + url : url,
+        success: res => resolve(res),
+        fail: err => reject(err)
+      })
+    })
+  }
+  get(options) {
+    return this.request({
+      ...options, method: 'GET'
+    })
+  }
+  post(options) {
+    return this.request({
+      ...options, method: 'POST'
+    })
+  }
+}
+// with defult parameter of BASE_URL
+export const zxRequestInstnace = new zxRequest(BASE_URL)
 
+// without defult parameter
+export const zxRequestInstnaceWO = new zxRequest()
 
-
-
-export default myRequest

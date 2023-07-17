@@ -1,0 +1,4 @@
+<!--pages/10_API_login/index.wxml-->
+<view>
+  <text class="token">{{token}}</text>
+</view>
